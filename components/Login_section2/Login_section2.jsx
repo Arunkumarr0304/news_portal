@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Modal, StatusBar } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/Back.svg";
 import Dark_back from "../../assets/images/White_back.svg";
@@ -15,10 +15,15 @@ const Login_section2 = ({ openModal, modalVisible, closeModal, openModal2 }) => 
 
   return (
     <View>
+        <StatusBar 
+        translucent
+        backgroundColor="transparent"
+        barStyle={darkMode ? "light-content" : "dark-content"} 
+      />
       <TouchableOpacity onPress={openModal}>
         <Text style={styles.forget}>Forgot password</Text>
       </TouchableOpacity>
-      <Button buttonText="Login" onPress={() => router.push('home')} />
+      <Button buttonText="Login" onPress={() => router.push('interest')} />
       <Log_method />
       <Text style={[styles.bottom_text, { color: theme.color }]}>
         Don’t have an account yet?<Link href='/create_account' style={styles.link}> Register</Link>

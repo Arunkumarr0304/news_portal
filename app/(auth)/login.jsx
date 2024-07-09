@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, Modal } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, Modal, StatusBar } from 'react-native';
 import React, { useContext, useState, useEffect } from 'react';
 import Mail from "../../assets/images/mail.svg";
 import { Lato_400Regular } from '@expo-google-fonts/lato';
@@ -33,6 +33,11 @@ const Login = () => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <StatusBar 
+        translucent
+        backgroundColor="transparent"
+        barStyle={darkMode ? "light-content" : "dark-content"} 
+      />
       <Text style={[styles.heading, { color: theme.color }]}>Login Account</Text>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text style={styles.head_text}>Login to access your personalized music collection and playlists anytime, anywhere.</Text>

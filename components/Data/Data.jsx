@@ -61,41 +61,41 @@ export const Interest_data = [
     {
         id: 2,
         image: Interest2,
-        text: 'Crypto',
+        text: 'Sports',
     },
     {
         id: 3,
         image: Interest3,
-        text: 'Crypto',
+        text: 'Travel',
     },
     {
         id: 4,
         image: Interest4,
-        text: 'Crypto',
+        text: 'Science',
     },
     {
         id: 5,
         image: Interest5,
-        text: 'Crypto',
+        text: 'Business',
     },
     {
         id: 6,
         image: Interest6,
-        text: 'Crypto',
+        text: 'Finance',
     },
     {
         id: 7,
         image: Interest7,
-        text: 'Crypto',
+        text: 'Life Style',
     },
     {
         id: 8,
         image: Interest8,
-        text: 'Crypto',
+        text: 'Design',
     },
     {
         id: 9,
         image: Interest9,
-        text: 'Crypto',
+        text: 'Technology',
     },
 ]

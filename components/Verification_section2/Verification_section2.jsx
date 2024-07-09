@@ -17,7 +17,7 @@ const Verification_section2 = () => {
     };
     const location = () => {
         setIsModalVisible(false);
-        router.push('home');
+        router.push('interest');
     };
   return (
     <View>

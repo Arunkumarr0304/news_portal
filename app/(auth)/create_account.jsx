@@ -21,6 +21,11 @@ const CreateAccount = () => {
 
     return (
         <View style={[styles.container, {backgroundColor:theme.background}]}>
+              <StatusBar 
+        translucent
+        backgroundColor="transparent"
+        barStyle={darkMode ? "light-content" : "dark-content"} 
+      />
             <Text style={[styles.heading, {color:theme.color}]}>Create Account</Text>
             <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
             <Text style={styles.headingText}>Create your account to unlock a personalized music experience tailored to your taste.</Text>

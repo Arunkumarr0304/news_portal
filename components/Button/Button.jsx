@@ -1,4 +1,5 @@
 
+import { Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
 import React, { useContext } from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
@@ -35,6 +36,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textTransform: 'capitalize',
+    fontFamily: 'Montserrat_600SemiBold',
     fontSize: 18,
     lineHeight: 28,
     textAlign: 'center',

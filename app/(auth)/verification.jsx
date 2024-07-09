@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, Modal, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, Modal, Keyboard, StatusBar } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/Back.svg";
 import Dark_back from "../../assets/images/White_back.svg";
@@ -19,6 +19,11 @@ const Verification = () => {
 
     return (
         <View style={[styles.container, {backgroundColor:theme.background}]}>
+              <StatusBar 
+        translucent
+        backgroundColor="transparent"
+        barStyle={darkMode ? "light-content" : "dark-content"} 
+      />
             <View style={styles.header}>
             <TouchableOpacity onPress={back}>
        {darkMode? <Dark_back /> :  <Back />}
