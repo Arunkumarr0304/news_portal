@@ -16,6 +16,32 @@ import Interest7 from "../../assets/images/interest7.png";
 import Interest8 from "../../assets/images/interest8.png";
 import Interest9 from "../../assets/images/interest9.png";
 
+import News1 from "../../assets/images/News1.png";
+import News2 from "../../assets/images/News2.png";
+import News3 from "../../assets/images/News3.png";
+import News4 from "../../assets/images/News4.png";
+import News_profile1 from "../../assets/images/news_profile1.png";
+import News_profile2 from "../../assets/images/news_profile2.png";
+import News_profile3 from "../../assets/images/news_profile3.png";
+import News_profile4 from "../../assets/images/news_profile4.png";
+import News_profile5 from "../../assets/images/news_profile5.png";
+import News_profile6 from "../../assets/images/news_profile6.png";
+
+import Explore1 from "../../assets/images/explore1.png";
+import Explore2 from "../../assets/images/explore2.png";
+import Explore3 from "../../assets/images/explore3.png";
+
+import Trending1 from "../../assets/images/Trending1.png";
+import Trending2 from "../../assets/images/Trending2.png";
+import Trending3 from "../../assets/images/Trending3.png";
+
+import Logo1 from "../../assets/images/logo1.svg";
+import Logo2 from "../../assets/images/logo2.svg";
+import Logo3 from "../../assets/images/logo3.png";
+import Logo4 from "../../assets/images/logo4.svg";
+import Logo5 from "../../assets/images/logo5.svg";
+import Logo6 from "../../assets/images/logo6.svg";
+
 export const pages = [
     {
         id: 1,
@@ -99,3 +125,235 @@ export const Interest_data = [
         text: 'Technology',
     },
 ]
+
+
+export const news_data = [
+    {
+        id: 1,
+        image: News1, 
+        news: 'Breaking News',
+        profile: News_profile1,
+        text: 'Significant Progress in Middle East Peace Talks',
+        name: 'billy',
+        timing: '6h Ago',
+        comment: '50',
+    },
+    {
+        id: 2,
+        image: News2, 
+        news: 'World News',
+        profile: News_profile2,
+        text: 'Major Earthquake Strikes Metropolitan Area',
+        name: 'butcher',
+        timing: '5h Ago',
+        comment: '50',
+    },
+    {
+        id: 3,
+        image: News3, 
+        news: 'Local News',
+        profile: News_profile3,
+        text: 'Global Leaders Convene to Address Climate Change',
+        name: 'hughie',
+        timing: '5h Ago',
+        comment: '50',
+    },
+    {
+        id: 4,
+        image: News4, 
+        news: 'World News',
+        profile: News_profile4,
+        text: 'Revolutionary New Smartphone Unveiled by Tech',
+        name: 'john walker',
+        timing: '6h Ago',
+        comment: '50',
+    },
+]
+
+export const tab_data = [
+    {
+        id: 1,
+        name: 'All',
+    },
+    {
+        id: 2,
+        name: 'Business',
+    },
+    {
+        id: 3,
+        name: 'Crypto',
+    },
+    {
+        id: 4,
+        name: 'Sports',
+    },
+    {
+        id: 5,
+        name: 'Technology',
+    },
+    {
+        id: 6,
+        name: 'Life Style',
+    },
+]
+
+export const stack_data = [
+    {
+        id: 1,
+        image: Explore1,
+        text: 'Thrilling World Cup Final: Highlights and Key Moments',
+        profile: News_profile1,
+        name: 'billy',
+        timing: '12h',
+        comment: '28',
+    },
+    {
+        id: 2,
+        image: Explore2,
+        text: 'New Affordable Housing Project Approved by City Council',
+        profile: News_profile2,
+        name: 'butcher',
+        timing: '12h',
+        comment: '28',
+    },
+    {
+        id: 3,
+        image: Explore3,
+        text: 'Breakthrough Cancer Treatment Shows Promising Results',
+        profile: News_profile3,
+        name: 'hughie',
+        timing: '12h',
+        comment: '28',
+    },
+]
+
+
+export const trending_data = [
+     {
+        id: 1,
+        image: Trending1,
+        profile: News_profile2,
+        text: 'AI Breakthroughs Transforming Industries',
+        name: 'Butcher',
+        timing: '12h',
+        comment: '28',
+     },
+     {
+        id: 2,
+        image: Trending2,
+        profile: News_profile1,
+        text: 'New Vaccine Shows Promising Results',
+        name: 'hughie',
+        timing: '12h',
+        comment: '28',
+     },
+     {
+        id: 3,
+        image: Trending3,
+        profile: News_profile3,
+        text: 'NASA Announces Mars Mission Success',
+        name: 'billy',
+        timing: '12h',
+        comment: '28',
+     },
+]
+
+export const logo_data = [
+    {
+        id: 1,
+        icon: Logo1,
+        text: 'Sky News',
+        isSvg: true,
+    },
+    {
+        id: 2,
+        icon: Logo2,
+        text: 'CNN News',
+        isSvg: true,
+    },
+    {
+        id: 3,
+        icon: Logo3,
+        text: 'DailyPulse',
+        isSvg: false,
+    },
+    {
+        id: 4,
+        icon: Logo4,
+        text: 'ABC News',
+        isSvg: true,
+    },
+    {
+        id: 5,
+        icon: Logo5,
+        text: 'HeadlineHub',
+        isSvg: true,
+    },
+    {
+        id: 6,
+        icon: Logo6,
+        text: 'FlashNews',
+        isSvg: true,
+    },
+];
+
+export const logo_data2 = [
+    {
+        id: 1,
+        icon: News_profile1,
+        name: "Billy",
+    },
+    {
+        id: 2,
+        icon: News_profile3,
+        name: "Hughie",
+    },
+    {
+        id: 3,
+        icon: News_profile2,
+        name: "Antony",
+    },
+    {
+        id: 4,
+        icon: News_profile5,
+        name: "Butcher",
+    },
+    {
+        id: 5,
+        icon: News_profile6,
+        name: "john",
+    },
+]
+
+export const media_news_data = [
+    {
+        id: 1,
+        icon: Logo1,
+        text: 'ABC News',
+        text2: 'New Platforms Compete for Viewers Attention',
+        news: 'Business',
+        timing: '12h',
+        comment: '28',
+        isSvg: true,
+    },
+    {
+        id: 2,
+        icon: Logo2,
+        text: 'Sky News',
+        text2: 'Top Trending Shows and Hosts',
+        news: 'Business',
+        timing: '12h',
+        comment: '28',
+        isSvg: true,
+    },
+    {
+        id: 3,
+        icon: Logo3,
+        text: 'DailyPulse',
+        text2: 'Award-Winning Films and Directors',
+        news: 'Business',
+        timing: '12h',
+        comment: '28',
+        isSvg: false,
+    },
+];
