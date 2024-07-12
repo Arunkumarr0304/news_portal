@@ -10,6 +10,9 @@ const Root_layout = () => {
         <Stack.Screen name='index' />
         <Stack.Screen name='(auth)' />
         <Stack.Screen name='(tabs)' />
+        <Stack.Screen name='(screens)/news_details' />
+        <Stack.Screen name='(screens)/search' />
+        <Stack.Screen name='(screens)/author' />
       </Stack>
     </ThemeProvider>
   )

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { Lato_400Regular } from '@expo-google-fonts/lato';
 import { news_data } from '../Data/Data';
@@ -7,8 +7,11 @@ import Empty from "../../assets/images/empty_heart.svg";
 import Filled from "../../assets/images/filled_heart.svg";
 import Timer from "../../assets/images/timer.svg";
 import Command from "../../assets/images/message.svg";
+import { router, Link } from "expo-router";
+import ThemeContext from '../../theme/ThemeContext';
 
 const Home_section2 = () => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const [wishlists, setWishlists] = useState({});
 
   const toggleWishlist = (id) => {
@@ -17,7 +20,9 @@ const Home_section2 = () => {
       [id]: !prevState[id]
     }));
   }
-
+  const details = () => {
+    router.push('/news_details');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>
@@ -27,7 +32,7 @@ const Home_section2 = () => {
       <ScrollView horizontal={true} style={styles.card_container}>
         {
           news_data.map((d) => (
-            <TouchableOpacity style={styles.card} key={d.id}>
+            <TouchableOpacity style={styles.card} key={d.id} onPress={details}>
               <Image source={d.image} alt='image' style={styles.image} />
               <View style={styles.top_row}>
                 <Text style={styles.news}>{d.news}</Text>

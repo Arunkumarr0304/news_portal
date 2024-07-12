@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { logo_data } from '../Data/Data';
 import { Lato_400Regular } from '@expo-google-fonts/lato';
+import ThemeContext from '../../theme/ThemeContext';
 
 const Explore_section3 = () => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/Back.svg";
 import Dark_back from "../../assets/images/White_back.svg";
@@ -11,12 +11,16 @@ import Explore_section2 from '../../components/Explore_section/explore_section2'
 import Explore_section3 from '../../components/Explore_section/explore_section3';
 import Explore_section4 from '../../components/Explore_section/explore_section4';
 import Explore_section5 from '../../components/Explore_section/explore_section5';
+import { router, Link } from "expo-router";
 
 const Explore = () => {
   const { theme,  darkMode } = useContext(ThemeContext);
   const [active_tab, setActive_tab] = useState(tab_data[0].id);
     const press = (id) => {
         setActive_tab(id);
+    };
+    const searches = () => {
+      router.push('/search');
     };
   return (
     <View style={styles.container}>
@@ -29,7 +33,7 @@ const Explore = () => {
         <View style={styles.search}>
           <Search  />
         </View>
-        <TextInput style={[styles.input, {backgroundColor: theme.cardbg, color: theme.color}]} placeholder='Search' />
+        <TextInput style={[styles.input, {backgroundColor: theme.cardbg, color: theme.color}]} placeholder='Search' onPress={searches} />
         <View style={styles.mic}>
             <Mic />
         </View>
@@ -75,7 +79,6 @@ const styles = StyleSheet.create({
     marginVertical: 16,
 },
 input: {
-    borderRadius: 10,
     backgroundColor: '#F6F6F6',
     paddingVertical: 16,
     paddingHorizontal: 40,

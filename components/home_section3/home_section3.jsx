@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native'
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { stack_data, tab_data } from '../Data/Data';
 import { Lato_700Bold } from '@expo-google-fonts/lato';
 import Timer from "../../assets/images/timer.svg";
 import Command from "../../assets/images/message.svg";
 import Dots from "../../assets/images/dots.svg";
+import ThemeContext from '../../theme/ThemeContext';
 
 const Home_section3 = () => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
     const [active_tab, setActive_tab] = useState(tab_data[0].id);
     const press = (id) => {
         setActive_tab(id);

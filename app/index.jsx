@@ -10,7 +10,7 @@ import { Lato_400Regular, Lato_700Bold } from "@expo-google-fonts/lato";
 import ThemeContext from "../theme/ThemeContext";
 import Pagination from "../components/Pagination/Pagination";
 import { Amarante_400Regular } from "@expo-google-fonts/amarante";
-import { Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
+import { Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold, Montserrat_400Regular } from "@expo-google-fonts/montserrat";
 
 
 
@@ -31,6 +31,7 @@ export default function App() {
     Montserrat_700Bold,
     Montserrat_500Medium,
     Montserrat_600SemiBold,
+    Montserrat_400Regular,
     Lato_700Bold,
   });
 

@@ -42,11 +42,39 @@ import Logo4 from "../../assets/images/logo4.svg";
 import Logo5 from "../../assets/images/logo5.svg";
 import Logo6 from "../../assets/images/logo6.svg";
 
+import Media1 from "../../assets/images/media1.png";
+import Media2 from "../../assets/images/media2.png";
+import Media3 from "../../assets/images/media3.png";
+
+import Fav1 from "../../assets/images/Favourite1.png";
+import Fav2 from "../../assets/images/Favourite2.png";
+import Fav3 from "../../assets/images/Favourite3.png";
+import Fav4 from "../../assets/images/Favourite4.png";
+
+import Profile1 from "../../assets/images/profile1.svg";
+import Profile2 from "../../assets/images/profile2.svg";
+import Profile3 from "../../assets/images/profile3.svg";
+import Profile4 from "../../assets/images/profile4.svg";
+import Profile5 from "../../assets/images/profile5.svg";
+import Profile6 from "../../assets/images/profile6.svg";
+
+import Dark_profile1 from "../../assets/images/dark_profile1.svg";
+import Dark_profile2 from "../../assets/images/dark_profile2.svg";
+import Dark_profile3 from "../../assets/images/dark_profile3.svg";
+import Dark_profile4 from "../../assets/images/dark_profile4.svg";
+import Dark_profile5 from "../../assets/images/dark_profile5.svg";
+import Dark_profile6 from "../../assets/images/dark_profile6.svg";
+
+import Online1 from "../../assets/images/twitter.svg";
+import Online2 from "../../assets/images/insta.svg";
+import Online3 from "../../assets/images/linked.svg";
+import Online4 from "../../assets/images/gmail.svg";
+
 export const pages = [
     {
         id: 1,
         image: Onboard1,
-        heading: 'Welcome to Our News App',    
+        heading: 'Welcome to Our News App',
         text: "Stay informed with breaking news, top stories, and trending topics from around the world, all in one place.",
     },
     {
@@ -66,13 +94,13 @@ export const pages = [
 export const log_methods = [
     {
         id: 1,
-        image: <Google />, 
+        image: <Google />,
         dark_image: <Google />,
         text: 'Sign Up with Google',
     },
     {
         id: 2,
-        image: <Apple />, 
+        image: <Apple />,
         dark_image: <Dark_Apple />,
         text: 'Sign Up with Apple',
     },
@@ -130,7 +158,7 @@ export const Interest_data = [
 export const news_data = [
     {
         id: 1,
-        image: News1, 
+        image: News1,
         news: 'Breaking News',
         profile: News_profile1,
         text: 'Significant Progress in Middle East Peace Talks',
@@ -140,7 +168,7 @@ export const news_data = [
     },
     {
         id: 2,
-        image: News2, 
+        image: News2,
         news: 'World News',
         profile: News_profile2,
         text: 'Major Earthquake Strikes Metropolitan Area',
@@ -150,7 +178,7 @@ export const news_data = [
     },
     {
         id: 3,
-        image: News3, 
+        image: News3,
         news: 'Local News',
         profile: News_profile3,
         text: 'Global Leaders Convene to Address Climate Change',
@@ -160,7 +188,7 @@ export const news_data = [
     },
     {
         id: 4,
-        image: News4, 
+        image: News4,
         news: 'World News',
         profile: News_profile4,
         text: 'Revolutionary New Smartphone Unveiled by Tech',
@@ -229,7 +257,7 @@ export const stack_data = [
 
 
 export const trending_data = [
-     {
+    {
         id: 1,
         image: Trending1,
         profile: News_profile2,
@@ -237,8 +265,8 @@ export const trending_data = [
         name: 'Butcher',
         timing: '12h',
         comment: '28',
-     },
-     {
+    },
+    {
         id: 2,
         image: Trending2,
         profile: News_profile1,
@@ -246,8 +274,8 @@ export const trending_data = [
         name: 'hughie',
         timing: '12h',
         comment: '28',
-     },
-     {
+    },
+    {
         id: 3,
         image: Trending3,
         profile: News_profile3,
@@ -255,7 +283,7 @@ export const trending_data = [
         name: 'billy',
         timing: '12h',
         comment: '28',
-     },
+    },
 ]
 
 export const logo_data = [
@@ -328,6 +356,7 @@ export const logo_data2 = [
 export const media_news_data = [
     {
         id: 1,
+        image: Media1,
         icon: Logo1,
         text: 'ABC News',
         text2: 'New Platforms Compete for Viewers Attention',
@@ -338,6 +367,7 @@ export const media_news_data = [
     },
     {
         id: 2,
+        image: Media2,
         icon: Logo2,
         text: 'Sky News',
         text2: 'Top Trending Shows and Hosts',
@@ -348,6 +378,7 @@ export const media_news_data = [
     },
     {
         id: 3,
+        image: Media3,
         icon: Logo3,
         text: 'DailyPulse',
         text2: 'Award-Winning Films and Directors',
@@ -357,3 +388,235 @@ export const media_news_data = [
         isSvg: false,
     },
 ];
+
+
+
+export const fav_data = [
+    {
+        id: 1,
+        image: Fav1,
+        news: 'Breaking News',
+        profile: News_profile1,
+        text: 'Highlights from the Latest International Summit',
+        name: 'billy',
+        timing: '6h Ago',
+        comment: '50',
+    },
+    {
+        id: 2,
+        image: Fav2,
+        news: 'World News',
+        profile: News_profile4,
+        text: 'Economic Revitalization Strategies and Challenges',
+        name: 'butcher',
+        timing: '5h Ago',
+        comment: '50',
+    },
+    {
+        id: 3,
+        image: Fav3,
+        news: 'World News',
+        profile: News_profile2,
+        text: 'Major Earthquake Strikes Metropolitan Area',
+        name: 'hughie',
+        timing: '5h Ago',
+        comment: '50',
+    },
+    {
+        id: 4,
+        image: Fav4,
+        news: 'Local News',
+        profile: News_profile3,
+        text: 'Global Leaders Convene to Address Climate Change',
+        name: 'john walker',
+        timing: '6h Ago',
+        comment: '50',
+    },
+]
+
+export const tab_data2 = [
+    {
+        id: 1,
+        name: 'Stories',
+    },
+    {
+        id: 2,
+        name: 'Topic',
+    },
+    {
+        id: 3,
+        name: 'Author',
+    },
+]
+
+
+export const media_news_data2 = {
+    1: [
+        {
+            id: 1,
+            image: Media1,
+            icon: Logo1,
+            text: 'ABC News',
+            text2: 'New Platforms Compete for Viewers Attention',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+        {
+            id: 2,
+            image: Media2,
+            icon: Logo2,
+            text: 'Sky News',
+            text2: 'Top Trending Shows and Hosts',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+        {
+            id: 3,
+            image: Media3,
+            icon: Logo3,
+            text: 'DailyPulse',
+            text2: 'Award-Winning Films and Directors',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: false,
+        },
+        // More data for Tab 1...
+    ],
+    2: [
+        {
+            id: 1,
+            image: Media2,
+            icon: Logo2,
+            text: 'Sky News',
+            text2: 'Top Trending Shows and Hosts',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+        {
+            id: 2,
+            image: Media1,
+            icon: Logo1,
+            text: 'ABC News',
+            text2: 'New Platforms Compete for Viewers Attention',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+        {
+            id: 3,
+            image: Media3,
+            icon: Logo3,
+            text: 'DailyPulse',
+            text2: 'Award-Winning Films and Directors',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: false,
+        },
+    ],
+    3: [
+        {
+            id: 1,
+            image: Media3,
+            icon: Logo3,
+            text: 'DailyPulse',
+            text2: 'Award-Winning Films and Directors',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: false,
+        },
+        {
+            id: 2,
+            image: Media2,
+            icon: Logo2,
+            text: 'Sky News',
+            text2: 'Top Trending Shows and Hosts',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+        {
+            id: 3,
+            image: Media1,
+            icon: Logo1,
+            text: 'ABC News',
+            text2: 'New Platforms Compete for Viewers Attention',
+            news: 'Business',
+            timing: '12h',
+            comment: '28',
+            isSvg: true,
+        },
+    ],
+};
+
+
+
+export const profile_data = [
+    {
+        id: 1,
+        icon: <Profile1 />,
+        active_icon: <Dark_profile1 />,
+        name: 'Payment Method',
+    },
+    {
+        id: 2,
+        icon: <Profile2 />,
+        active_icon: <Dark_profile2 />,
+        name: 'Notifications',
+    },
+
+    {
+        id: 3,
+        icon: <Profile3 />,
+        active_icon: <Dark_profile3 />,
+        name: 'Dark Mode',
+    },
+    {
+        id: 4,
+        icon: <Profile4 />,
+        active_icon: <Dark_profile4 />,
+        name: 'Help & Support',
+    },
+    {
+        id: 5,
+        icon: <Profile6 />,
+        active_icon: <Dark_profile6 />,
+        name: 'Legal and Policies',
+    },
+    {
+        id: 6,
+        icon: <Profile5 />,
+        active_icon: <Dark_profile5 />,
+        name: 'Language',
+    },
+]
+
+
+export const Online_data = [
+    {
+        id: 1,
+        icon: <Online1 />,
+    },
+    {
+        id: 2,
+        icon: <Online2 />,
+    },
+    {
+        id: 3,
+        icon: <Online3 />,
+    },
+    {
+        id: 4,
+        icon: <Online4 />,
+    },
+]

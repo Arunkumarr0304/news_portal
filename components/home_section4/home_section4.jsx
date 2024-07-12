@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import car from "../../assets/images/home_image.png";
 import profile from "../../assets/images/section3_profile.png";
 import { Lato_400Regular, Lato_700Bold } from '@expo-google-fonts/lato';
+import ThemeContext from '../../theme/ThemeContext';
 
 const Home_section4 = () => {
+    const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
     const [isExpanded, setIsExpanded] = useState(false);
     const text = "As the demand for sustainable transportation grows, electric vehicles are becoming more popular. Experts weigh in on the future of the industry As the demand for sustainable transportation grows, electric vehicles are becoming more popular. Experts weigh in on the future of the industry";
     const truncatedText = text.split(' ').slice(0, 22).join(' ');

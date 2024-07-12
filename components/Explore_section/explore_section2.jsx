@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
-import React from 'react';
+import React, { useContext } from 'react';
 import { trending_data } from '../Data/Data';
 import Timer from "../../assets/images/timer.svg";
 import Command from "../../assets/images/message.svg";
+import ThemeContext from '../../theme/ThemeContext';
 
 const Explore_section2 = () => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>

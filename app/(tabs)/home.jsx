@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, StatusBar } from 'react-native';
 import React, { useContext } from 'react';
 import Home_Profile from "../../assets/images/home_profile.png";
 import Notification from "../../assets/images/notification.svg";
@@ -8,11 +8,17 @@ import Home_section2 from '../../components/home_section2/home_section2';
 import Home_section3 from '../../components/home_section3/home_section3';
 import Home_section4 from '../../components/home_section4/home_section4';
 import ThemeContext from '../../theme/ThemeContext';
+import { router, Link } from "expo-router";
 
 const Home = () => {
     const { theme,  darkMode } = useContext(ThemeContext);
   return (
     <View style={styles.container}>
+          <StatusBar 
+        translucent
+        backgroundColor="transparent"
+        barStyle={darkMode ? "light-content" : "dark-content"} 
+      />
       <View style={styles.header}>
         <View style={styles.header_left}>
             <Image source={Home_Profile} alt='image' style={styles.profile} />

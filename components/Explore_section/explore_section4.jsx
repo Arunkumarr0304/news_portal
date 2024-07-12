@@ -1,20 +1,26 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
-import React from 'react';
+import React, { useContext } from 'react';
 import { logo_data2 } from '../Data/Data';
 import Button from '../Button/Button';
 import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+import { router, Link } from "expo-router";
+import ThemeContext from '../../theme/ThemeContext';
 
 const Explore_section4 = () => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
+  const author = () => {
+    router.push('/author');
+  };
   return (
     <View style={styles.container}>
        <View style={styles.head_row}>
-        <Text style={styles.heading}>Popular Media</Text>
+        <Text style={styles.heading}>Top Author</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <ScrollView horizontal={true} style={styles.logo_container}>
         {
           logo_data2.map((d) => (
-            <TouchableOpacity style={styles.tab} key={d.id}>
+            <TouchableOpacity style={styles.tab} key={d.id} onPress={author}>
               <Image source={d.icon} alt='image' style={styles.image} />  
               <Text style={styles.logo_text}>{d.name}</Text>
               <Button buttonText="follow" />

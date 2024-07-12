@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
+import ThemeContext from '../../theme/ThemeContext';
 
 const { width } = Dimensions.get('window');
 
 const Pagination = ({ activePageIndex, totalPages }) => {
+  const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.paginationContainer}>
       {Array.from({ length: totalPages }).map((_, index) => (
