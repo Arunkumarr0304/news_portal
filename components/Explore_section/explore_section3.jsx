@@ -9,7 +9,7 @@ const Explore_section3 = () => {
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>
-        <Text style={styles.heading}>Popular Media</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>Popular Media</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <ScrollView horizontal={true} style={styles.logo_container}>
@@ -23,7 +23,7 @@ const Explore_section3 = () => {
                   : <Image source={d.icon} style={styles.icon} />
               }
               </View>
-              <Text style={styles.logo_text}>{d.text}</Text>
+              <Text style={[styles.logo_text, {color:theme.color}]}>{d.text}</Text>
             </TouchableOpacity>
           ))
         }
@@ -76,12 +76,12 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     resizeMode: 'contain',
-   
   },
   logo_text: {
     fontSize: 12,
     lineHeight: 16,
     fontFamily: 'Lato_400Regular',
     color: '#000000',
+    paddingTop: 10,
   }
 });

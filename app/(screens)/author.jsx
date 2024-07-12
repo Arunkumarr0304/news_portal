@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, StatusBar } from 'react-native';
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/Back.svg";
 import Dark_back from "../../assets/images/White_back.svg";
 import ThemeContext from '../../theme/ThemeContext';
@@ -9,32 +9,40 @@ import Profile from "../../assets/images/news_profile1.png";
 import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { Lato_400Regular } from '@expo-google-fonts/lato';
 import Author_section2 from '../../components/Author_section/Author_section2';
+import { router, Link } from "expo-router";
 
 const Author = () => {
     const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
-  return (
-    <View style={styles.container}>
-          <StatusBar 
-        translucent
-        backgroundColor="transparent"
-        barStyle={darkMode ? "light-content" : "dark-content"} 
-      />
-      <View style={styles.header}>
-        <Back />
-        <Dot />
-      </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={styles.content}>
-        <Image source={Profile} alt='image' style={styles.profile} />
-        <Text style={styles.name}>VKY</Text>
-        <Text style={styles.id}>@VKY20</Text>
-      </View>
-      <Text style={styles.bio}>Bio</Text>
-      <Text style={styles.bio_text}>John Smith is a seasoned political journalist with 15+ years of experience, known for his in-depth analysis and clear writing. He has covered election cycles, international summits, and major policy shifts, with work featured in leading publications.</Text>
-      <Author_section2 />
-      </ScrollView>
-    </View>
-  )
+    const back = () => {
+        router.push('home');
+    };
+    return (
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
+            <StatusBar
+                translucent
+                backgroundColor="transparent"
+                barStyle={darkMode ? "light-content" : "dark-content"}
+            />
+            <View style={styles.header}>
+                <TouchableOpacity onPress={back}>
+                    {darkMode ? <Dark_back /> : <Back />}
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    {darkMode ? <Dark_Dot /> : <Dot />}
+                </TouchableOpacity>
+            </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.content}>
+                    <Image source={Profile} alt='image' style={styles.profile} />
+                    <Text style={[styles.name, {color:theme.color}]}>VKY</Text>
+                    <Text style={[styles.id, {color:theme.color}]}>@VKY20</Text>
+                </View>
+                <Text style={[styles.bio, {color:theme.color}]}>Bio</Text>
+                <Text style={[styles.bio_text, {color:theme.color}]}>John Smith is a seasoned political journalist with 15+ years of experience, known for his in-depth analysis and clear writing. He has covered election cycles, international summits, and major policy shifts, with work featured in leading publications.</Text>
+                <Author_section2 />
+            </ScrollView>
+        </View>
+    )
 }
 
 export default Author;
@@ -70,7 +78,7 @@ const styles = StyleSheet.create({
         color: '#121212',
     },
     bio: {
-        fontSize: 18, 
+        fontSize: 18,
         lineHeight: 28,
         fontFamily: 'Montserrat_700Bold',
         color: '#000000',

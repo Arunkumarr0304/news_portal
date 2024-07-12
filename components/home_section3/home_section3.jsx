@@ -16,7 +16,7 @@ const Home_section3 = () => {
   return (
     <View style={styles.container}>
         <View style={styles.head_row}>
-        <Text style={styles.heading}>Explore</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>Explore</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <ScrollView horizontal={true} style={styles.tab_container}>
@@ -31,17 +31,17 @@ const Home_section3 = () => {
       <View style={styles.stack_container}>
         {
           stack_data.map((d) => (
-                  <TouchableOpacity style={styles.stack} key={d.id}>
+                  <TouchableOpacity style={[styles.stack, {backgroundColor:theme.coloring}]} key={d.id}>
                         <Image source={d.image} alt='image' style={styles.stack_image} />
                         <View style={styles.stack_body}>
                             <View style={styles.text_row}>
-                            <Text style={styles.text}>{d.text}</Text>
+                            <Text style={[styles.text, {color:theme.color}]}>{d.text}</Text>
                             <Dots style={styles.dots} />
                             </View>
                             <View style={styles.bottom_row}>
                     <View style={styles.bottom_left}>
                         <Image style={styles.profile} source={d.profile} alt='profile' />
-                        <Text style={styles.name}>{d.name}</Text>
+                        <Text style={[styles.name, {color:theme.color}]}>{d.name}</Text>
                     </View>
                     <View style={styles.bottom_right}>
                         <View style={styles.timer}>
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
       },
     tab_container: {
         flexDirection: 'row',
+        marginBottom: 20,
     },
     tab: {
         marginRight: 12,

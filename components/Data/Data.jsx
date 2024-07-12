@@ -69,6 +69,7 @@ import Online1 from "../../assets/images/twitter.svg";
 import Online2 from "../../assets/images/insta.svg";
 import Online3 from "../../assets/images/linked.svg";
 import Online4 from "../../assets/images/gmail.svg";
+import Dark_Online1 from "../../assets/images/dark_twitter.svg";
 
 export const pages = [
     {
@@ -606,17 +607,21 @@ export const Online_data = [
     {
         id: 1,
         icon: <Online1 />,
+        dark_icon: <Dark_Online1 />,
     },
     {
         id: 2,
         icon: <Online2 />,
+        dark_icon: <Online2 />,
     },
     {
         id: 3,
         icon: <Online3 />,
+        dark_icon: <Online3 />,
     },
     {
         id: 4,
         icon: <Online4 />,
+        dark_icon: <Online4 />,
     },
 ]

@@ -14,11 +14,11 @@ const Home_section4 = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.heading}>Featured Articles</Text>
+            <Text style={[styles.heading, {color:theme.color}]}>Featured Articles</Text>
             <Image source={car} alt='image' style={styles.image} />
-            <Text style={styles.heading}>The Future of Electric Vehicles</Text>
+            <Text style={[styles.heading, {color:theme.color}]}>The Future of Electric Vehicles</Text>
             <Image source={profile} alt='image' style={styles.profile} />
-            <Text style={styles.section3_text}>
+            <Text style={[styles.section3_text, {color:theme.color3}]}>
                 {isExpanded ? text : `${truncatedText}`}
                 <Text style={styles.read} onPress={() => setIsExpanded(!isExpanded)}>
                     {isExpanded ? " Show Less" : " Read More..."}
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     profile: {
         width: 80,
         height: 32,
+        marginTop: 10,
     },
     section3_text: {
         fontSize: 12,

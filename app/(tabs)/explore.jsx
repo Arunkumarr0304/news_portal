@@ -22,11 +22,17 @@ const Explore = () => {
     const searches = () => {
       router.push('/search');
     };
+    const back = () => {
+      router.push('home');
+    };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor:theme.background}]}>
       <View style={styles.header}>
-        <Back />
-        <Text style={styles.heading}>Explore</Text>
+        <TouchableOpacity onPress={back}>
+      {darkMode? <Dark_back /> : <Back />}
+      </TouchableOpacity>
+        <Text style={[styles.heading, {color:theme.color}]}>Explore</Text>
+        
       </View>
       <ScrollView showsVerticalScrollIndicator={false} >
       <View style={styles.input_container}>

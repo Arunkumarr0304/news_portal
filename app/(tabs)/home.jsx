@@ -13,7 +13,7 @@ import { router, Link } from "expo-router";
 const Home = () => {
     const { theme,  darkMode } = useContext(ThemeContext);
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor:theme.background}]}>
           <StatusBar 
         translucent
         backgroundColor="transparent"
@@ -23,8 +23,8 @@ const Home = () => {
         <View style={styles.header_left}>
             <Image source={Home_Profile} alt='image' style={styles.profile} />
             <View style={styles.heading_column}>
-                <Text style={styles.heading}>Welcome Back,</Text>
-                <Text style={styles.name}>Minato Namikaza</Text>
+                <Text style={[styles.heading, {color:theme.color3}]}>Welcome Back,</Text>
+                <Text style={[styles.name, {color:theme.color}]}>Minato Namikaza</Text>
             </View>
         </View>
         <TouchableOpacity style={styles.notification}>

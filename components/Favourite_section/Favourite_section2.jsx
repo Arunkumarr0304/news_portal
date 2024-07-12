@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Calendar from "../../assets/images/calendar.svg";
+import Dark_calendar from "../../assets/images/dark_calendar.svg";
 import { Lato_700Bold } from '@expo-google-fonts/lato';
 import { Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import { Lato_400Regular } from '@expo-google-fonts/lato';
@@ -23,16 +24,16 @@ const Favourite_section2 = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Calendar />
-                <Text style={styles.date}>Mon, July 08</Text>
+              {darkMode? <Dark_calendar /> : <Calendar />}
+                <Text style={[styles.date, {color:theme.color}]}>Mon, July 08</Text>
             </View>
             <ScrollView horizontal={true} style={styles.card_container}>
                 {
                     fav_data.map((d) => (
-                        <TouchableOpacity style={styles.card} key={d.id}>
+                        <TouchableOpacity style={[styles.card, {backgroundColor:theme.cardbg}]} key={d.id}>
                             <Image source={d.image} alt='image' style={styles.image} />
                             <View style={styles.top_row}>
-                                <Text style={styles.news}>{d.news}</Text>
+                                <Text style={[styles.news]}>{d.news}</Text>
                                 <TouchableOpacity style={styles.wishlist} onPress={() => toggleWishlist(d.id)}>
                                     {
                                         wishlists[d.id] ?
@@ -42,16 +43,16 @@ const Favourite_section2 = () => {
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.card_body}>
-                                <Text style={styles.text}>{d.text}</Text>
+                                <Text style={[styles.text, {color:theme.color}]}>{d.text}</Text>
                                 <View style={styles.bottom_row}>
                                     <View style={styles.bottom_left}>
                                         <Image style={styles.profile} source={d.profile} alt='profile' />
-                                        <Text style={styles.name}>{d.name}</Text>
+                                        <Text style={[styles.name, {color:theme.color}]}>{d.name}</Text>
                                     </View>
                                     <View style={styles.bottom_right}>
                                         <View style={styles.timer}>
                                             <Timer />
-                                            <Text style={styles.bottom_text}>{d.timing}</Text>
+                                            <Text style={[styles.bottom_text]}>{d.timing}</Text>
                                         </View>
                                         <View style={styles.timer}>
                                             <Command />

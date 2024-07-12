@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Calendar from "../../assets/images/calendar.svg";
+import Dark_calendar from "../../assets/images/dark_calendar.svg";
 import Fav from "../../assets/images/Favourite_img.png";
 import Empty from "../../assets/images/empty_heart.svg";
 import Filled from "../../assets/images/filled_heart.svg";
@@ -21,8 +22,8 @@ const Favourite_section3 = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Calendar />
-                <Text style={styles.date}>Tue, July 02</Text>
+            {darkMode? <Dark_calendar /> : <Calendar />}
+                <Text style={[styles.date, {color:theme.color}]}>Tue, July 02</Text>
             </View>
             <View style={styles.content}>
                 <Image source={Fav} alt='image' style={styles.image} />
@@ -35,9 +36,9 @@ const Favourite_section3 = () => {
                 </TouchableOpacity>
 
             </View>
-            <Text style={styles.heading}>New Legislation and Its Implications</Text>
+            <Text style={[styles.heading, {color:theme.color}]}>New Legislation and Its Implications</Text>
             <Image source={profile} alt='image' style={styles.profile} />
-            <Text style={styles.section3_text}>
+            <Text style={[styles.section3_text, {color:theme.color3}]}>
                 {isExpanded ? text : `${truncatedText}`}
                 <Text style={styles.read} onPress={() => setIsExpanded(!isExpanded)}>
                     {isExpanded ? " Show Less" : " Read More..."}

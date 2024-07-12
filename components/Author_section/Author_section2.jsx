@@ -21,19 +21,19 @@ const Author_section2 = () => {
   return (
     <View style={styles.container}>
       <View style={styles.online_container}>
-        <Text style={styles.list_heading}>Social Media Links:</Text>
+        <Text style={[styles.list_heading, {color:theme.color}]}>Social Media Links:</Text>
         <View style={styles.list}>
             {
                 Online_data.map((d) => (
                     <TouchableOpacity style={styles.online} key={d.id}>
-                        {d.icon}
+                        {darkMode? d.dark_icon : d.icon}
                     </TouchableOpacity>
                 ))
             }
         </View>
       </View>
       <View style={styles.head_row}>
-        <Text style={styles.heading}>Recent Articles</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>Recent Articles</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <View style={styles.content}>
@@ -47,7 +47,7 @@ const Author_section2 = () => {
                 </TouchableOpacity>
 
             </View>
-            <Text style={styles.heading}>New Legislation and Its Implications</Text>
+            <Text style={[styles.heading, {color:theme.color}]}>New Legislation and Its Implications</Text>
             <Image source={profile} alt='image' style={styles.profile} />
             <Text style={styles.section3_text}>
                 {isExpanded ? text : `${truncatedText}`}

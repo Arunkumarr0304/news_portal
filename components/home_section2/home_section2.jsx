@@ -26,13 +26,13 @@ const Home_section2 = () => {
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>
-        <Text style={styles.heading}>World News</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>World News</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <ScrollView horizontal={true} style={styles.card_container}>
         {
           news_data.map((d) => (
-            <TouchableOpacity style={styles.card} key={d.id} onPress={details}>
+            <TouchableOpacity style={[styles.card, {backgroundColor:theme.coloring}]} key={d.id} onPress={details}>
               <Image source={d.image} alt='image' style={styles.image} />
               <View style={styles.top_row}>
                 <Text style={styles.news}>{d.news}</Text>
@@ -45,11 +45,11 @@ const Home_section2 = () => {
                 </TouchableOpacity>
               </View>
               <View style={styles.card_body}>
-                <Text style={styles.text}>{d.text}</Text>
+                <Text style={[styles.text, {color:theme.color}]}>{d.text}</Text>
                 <View style={styles.bottom_row}>
                     <View style={styles.bottom_left}>
                         <Image style={styles.profile} source={d.profile} alt='profile' />
-                        <Text style={styles.name}>{d.name}</Text>
+                        <Text style={[styles.name, {color:theme.color}]}>{d.name}</Text>
                     </View>
                     <View style={styles.bottom_right}>
                         <View style={styles.timer}>

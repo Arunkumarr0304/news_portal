@@ -14,15 +14,15 @@ const Explore_section4 = () => {
   return (
     <View style={styles.container}>
        <View style={styles.head_row}>
-        <Text style={styles.heading}>Top Author</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>Top Author</Text>
         <Text style={styles.see}>See All</Text>
       </View>
       <ScrollView horizontal={true} style={styles.logo_container}>
         {
           logo_data2.map((d) => (
-            <TouchableOpacity style={styles.tab} key={d.id} onPress={author}>
+            <TouchableOpacity style={[styles.tab, {backgroundColor:theme.coloring}]} key={d.id} onPress={author}>
               <Image source={d.icon} alt='image' style={styles.image} />  
-              <Text style={styles.logo_text}>{d.name}</Text>
+              <Text style={[styles.logo_text, {color:theme.color}]}>{d.name}</Text>
               <Button buttonText="follow" />
             </TouchableOpacity>
           ))
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         marginRight: 16,
         alignItems: 'center',
         paddingVertical: 10,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
         backgroundColor: '#F6F6F6',
         borderRadius: 5,
         minHeight: 200,

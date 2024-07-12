@@ -10,7 +10,7 @@ const lightTheme = {
   color3: '#757575',
   log: '#FE1717',
   text: '#000000',
-  coloring: '#ffffff',
+  coloring: '#f6f6f6',
   cardbg: '#f6f6f6',
   cardbg2: '#f6f6f6',
   cardbg3: '#f6f6f6',

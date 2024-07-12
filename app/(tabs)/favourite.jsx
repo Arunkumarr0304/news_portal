@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity,StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/Back.svg";
 import Dark_back from "../../assets/images/White_back.svg";
@@ -9,6 +9,7 @@ import ThemeContext from '../../theme/ThemeContext';
 import { tab_data } from '../../components/Data/Data';
 import Favourite_section2 from '../../components/Favourite_section/Favourite_section2';
 import Favourite_section3 from '../../components/Favourite_section/Favourite_section3';
+import { router, Link } from "expo-router";
 
 const Favourite = () => {
   const { theme,  darkMode } = useContext(ThemeContext);
@@ -16,16 +17,21 @@ const Favourite = () => {
     const press = (id) => {
         setActive_tab(id);
     };
+    const back = () => {
+      router.push('home');
+    };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor:theme.background}]}>
         <StatusBar 
         translucent
         backgroundColor="transparent"
         barStyle={darkMode ? "light-content" : "dark-content"} 
       />
       <View style={styles.header}>
-        <Back />
-        <Text style={styles.heading}>Favorite</Text>
+        <TouchableOpacity onPress={back}>
+       {darkMode? <Dark_back /> : <Back />}
+       </TouchableOpacity>
+        <Text style={[styles.heading, {color:theme.color}]}>Favorite</Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false} >
       <View style={styles.input_container}>

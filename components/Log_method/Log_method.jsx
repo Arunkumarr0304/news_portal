@@ -11,7 +11,7 @@ const Log_method = () => {
             <View style={styles.tab_container}>
             {
                 log_methods.map((d) => (
-                    <TouchableOpacity style={[styles.tab]} key={d.id}>
+                    <TouchableOpacity style={[styles.tab, {backgroundColor:theme.cardbg}]} key={d.id}>
                         {darkMode? d.dark_image : d.image}
                         <Text style={[styles.tab_text, {color:theme.color}]}>{d.text}</Text>
                     </TouchableOpacity>

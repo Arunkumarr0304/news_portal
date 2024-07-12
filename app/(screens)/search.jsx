@@ -8,7 +8,7 @@ import ThemeContext from '../../theme/ThemeContext';
 import Search_section2 from '../../components/Search_section/Search_section2';
 import Search_section3 from '../../components/Search_section/search_section3';
 import { tab_data2 } from '../../components/Data/Data';
-
+import { router, Link } from "expo-router";
 
 const Search = () => {
   const { theme, darkMode } = useContext(ThemeContext);

@@ -11,11 +11,11 @@ const Explore_section5 = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Media News</Text>
+      <Text style={[styles.heading, {color:theme.color}]}>Media News</Text>
       <View style={styles.stack_container}>
         {
             media_news_data.map((d) => (
-                <TouchableOpacity style={styles.stack} key={d.id}>
+                <TouchableOpacity style={[styles.stack, {backgroundColor:theme.coloring}]} key={d.id}>
                     <View style={styles.stack_content}>
                         <View style={styles.media}>
                     <View style={styles.icon_circle}>
@@ -25,12 +25,12 @@ const Explore_section5 = () => {
                   : <Image source={d.icon} style={styles.icon} />
               }
               </View>
-              <Text style={styles.media_name}>{d.text}</Text>
+              <Text style={[styles.media_name, {color:theme.color}]}>{d.text}</Text>
                         </View>
-                        <Text style={styles.text}>{d.text2}</Text>
+                        <Text style={[styles.text, {color:theme.color}]}>{d.text2}</Text>
                         <View style={styles.bottom_row}>
                     <View style={styles.bottom_left}>
-                        <Text style={styles.news}>{d.news}</Text>
+                        <Text style={[styles.news, {color:theme.color3}]}>{d.news}</Text>
                     </View>
                     <View style={styles.bottom_right}>
                         <View style={styles.timer}>

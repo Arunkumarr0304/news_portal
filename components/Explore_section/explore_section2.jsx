@@ -4,26 +4,30 @@ import { trending_data } from '../Data/Data';
 import Timer from "../../assets/images/timer.svg";
 import Command from "../../assets/images/message.svg";
 import ThemeContext from '../../theme/ThemeContext';
+import { router, Link } from "expo-router";
 
 const Explore_section2 = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
+  const details = () => {
+    router.push('/news_details');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.head_row}>
-        <Text style={styles.heading}>Trending Topic</Text>
+        <Text style={[styles.heading, {color:theme.color}]}>Trending Topic</Text>
         <Text style={styles.see}>See All</Text>
       </View>
         <ScrollView horizontal={true} style={styles.trending_container}>
             {
                 trending_data.map((d) => (
-                    <TouchableOpacity style={styles.stack} key={d.id}>
+                    <TouchableOpacity style={styles.stack} key={d.id} onPress={details}>
                         <Image source={d.image} alt='image' style={styles.image} />
-                        <View style={styles.stack_content}>
-                        <Text style={styles.text}>{d.text}</Text>
+                        <View style={[styles.stack_content, {backgroundColor:theme.cardbg}]}>
+                        <Text style={[styles.text, {color:theme.color}]}>{d.text}</Text>
                         <View style={styles.bottom_row}>
                     <View style={styles.bottom_left}>
                         <Image style={styles.profile} source={d.profile} alt='profile' />
-                        <Text style={styles.name}>{d.name}</Text>
+                        <Text style={[styles.name, {color:theme.color}]}>{d.name}</Text>
                     </View>
                     <View style={styles.bottom_right}>
                         <View style={styles.timer}>

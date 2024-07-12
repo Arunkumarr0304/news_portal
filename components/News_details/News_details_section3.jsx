@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import React, {useContext, useState} from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React, { useContext, useState } from 'react';
 import Empty from "../../assets/images/empty_heart2.svg";
+import Dark_empty from "../../assets/images/dark_empty_heart.svg";
 import Filled from "../../assets/images/filled_heart.svg";
 import { Lato_400Regular } from '@expo-google-fonts/lato';
 import Command from "../../assets/images/message.svg";
@@ -10,43 +11,46 @@ import Saved from "../../assets/images/saved.svg";
 import ThemeContext from '../../theme/ThemeContext';
 
 const News_details_section3 = () => {
-    const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
+    const { theme, darkMode } = useContext(ThemeContext);
     const [wishlists, setWishlists] = useState(false);
     const [wishlists2, setWishlists2] = useState(true);
+
     const press = () => {
-        setWishlists(!wishlists)
+        setWishlists(!wishlists);
     }
+
     const save = () => {
-        setWishlists2(!wishlists2)
+        setWishlists2(!wishlists2);
     }
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.cardbg }]}>
             <View style={styles.box}>
                 <TouchableOpacity style={styles.wishlist} onPress={press}>
-                    {
-                        wishlists === true ?
-                            <Filled width={24} height={24} /> :
-                            <Empty width={24} height={24} />
-                    }
+                    {wishlists ? (
+                        <Filled width={24} height={24} />
+                    ) : (
+                        darkMode ? <Dark_empty width={24} height={24} /> : <Empty width={24} height={24} />
+                    )}
                 </TouchableOpacity>
-                <Text style={styles.likes}>25K</Text>
+                <Text style={[styles.likes, { color: theme.color }]}>25K</Text>
             </View>
-            <View style={styles.box}>
+            <View style={[styles.box, { backgroundColor: theme.cardbg }]}>
                 <Command />
-                <Text style={styles.comment}>89</Text>
+                <Text style={[styles.comment, { color: theme.color }]}>89</Text>
             </View>
             <Refresh />
             <View style={styles.box}>
                 <TouchableOpacity style={styles.wishlist} onPress={save}>
-                    {
-                        wishlists2 === true ?
-                            <Saved width={24} height={24} /> :
-                            <Unsaved width={24} height={24} />
-                    }
+                    {wishlists2 ? (
+                        <Saved width={24} height={24} />
+                    ) : (
+                        <Unsaved width={24} height={24} />
+                    )}
                 </TouchableOpacity>
-                </View>
+            </View>
         </View>
-    )
+    );
 }
 
 export default News_details_section3;
@@ -60,6 +64,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
     },
     box: {
         flexDirection: 'row',
@@ -78,4 +84,4 @@ const styles = StyleSheet.create({
         fontFamily: 'Lato_400Regular',
         color: '#757575',
     }
-})
+});
